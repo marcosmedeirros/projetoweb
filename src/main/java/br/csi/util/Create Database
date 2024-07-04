@@ -1,0 +1,40 @@
+CREATE DATABASE projetoweb;
+
+CREATE TABLE usuario(
+	id serial PRIMARY KEY,
+	nome varchar(100) NOT NULL,
+	email varchar(100) NOT NULL UNIQUE,
+	senha varchar(50) NOT NULL,
+    permissao varchar(50) DEFAULT 'cliente'
+);
+
+CREATE TABLE filme(
+    idfilme serial PRIMARY KEY,
+    nomefilme varchar(100) NOT NULL,
+    ano varchar(4),
+    genero varchar(50),
+    descricao varchar(500),
+    notamedia float,
+    imagem varchar(1500)
+);
+
+
+CREATE TABLE avaliacao(
+    idavaliacao serial PRIMARY KEY,
+    idusuario INT REFERENCES usuario(id),
+    idfilme INT REFERENCES filme(idfilme),
+    nota FLOAT,
+    UNIQUE (idusuario, idfilme)
+);
+
+
+TODO O USUARIO POR PADRAO É CLIENTE, SENDO ASSIM PARA DAR ADMIN TEM QUE IR NA TABELA E ALTERAR O CAMPO PERMISSAO PARA ADMIN
+
+INSERT INTO usuario (nome, email, senha, permissao)
+VALUES ('João Admin', 'joao@admin.com', '1234', 'admin');
+
+INSERT INTO usuario (nome, email, senha, permissao)
+VALUES ('Paulo Cliente', 'paulo@cliente.com', '1234', 'cliente');
+
+INSERT INTO usuario (nome, email, senha, permissao)
+VALUES ('Marcos', 'marcos@gmail.com', 'marcos', 'admin');

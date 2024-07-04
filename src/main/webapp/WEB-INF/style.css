@@ -1,0 +1,91 @@
+.navbar-custom {
+    background-color: #0E274E;
+    color: white;
+}
+.footer {
+    background-color: #0E274E;
+    color: white;
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer img {
+    width: 100px;
+    height: 100px;
+}
+.footer .contact-info, .footer .address-info {
+    line-height: 1.5;
+    text-align: center;
+}
+.card-custom {
+    background-color: #0E274E;
+    color: white;
+}
+.btn-custom {
+    background-color: white;
+    color: #0E274E;
+}
+.btn-custom:hover {
+    background-color: #f8f9fa;
+    color: #0E274E;
+}
+.textcadastrar{
+    color: #0E274E;
+}
+
+.nav-link{
+    color: white;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+.card-header {
+    background-color: #007bff;
+    color: white;
+}
+.card-body {
+    padding: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.rating {
+    display: inline-block; /* Para que o container das estrelas não ocupe toda a largura */
+    unicode-bidi: bidi-override; /* Para corrigir a ordem das estrelas em alguns navegadores */
+    direction: rtl; /* Para inverter a ordem das estrelas */
+}
+
+.rating input[type=radio] {
+    display: none; /* Esconde os inputs do tipo radio */
+}
+
+.rating label {
+    font-size: 20px; /* Tamanho das estrelas */
+    color: #ccc; /* Cor inicial das estrelas (cinza) */
+    cursor: pointer; /* Adiciona o cursor de mãozinha */
+}
+
+.rating label:before {
+    content: '\2605'; /* Caractere Unicode para estrela vazia */
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffc107; /* Cor das estrelas preenchidas (amarelo) */
+}
