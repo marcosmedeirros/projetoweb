@@ -12,7 +12,7 @@ CREATE TABLE filme(
     idfilme serial PRIMARY KEY,
     nomefilme varchar(100) NOT NULL,
     ano varchar(4),
-    genero varchar(50),
+    categoria varchar(50),
     descricao varchar(500),
     notamedia float,
     imagem varchar(1500)
@@ -38,3 +38,15 @@ VALUES ('Paulo Cliente', 'paulo@cliente.com', '1234', 'cliente');
 
 INSERT INTO usuario (nome, email, senha, permissao)
 VALUES ('Marcos', 'marcos@gmail.com', 'marcos', 'admin');
+
+FILMES BASE APENAS
+
+INSERT INTO filme (nomefilme, ano, categoria, descricao, imagem)
+VALUES ('Esqueceram de Mim', '1990', 'Comédia', 'Um garoto é esquecido em casa pela família nas férias de Natal.', 'https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg');
+
+INSERT INTO filme (nomefilme, ano, categoria, descricao, imagem)
+VALUES ('Carros', '2006', 'Animação', 'Um carro de corrida arrogante aprende o valor da amizade em uma cidade pequena.', 'https://m.media-amazon.com/images/M/MV5BMTg5NzY0MzA2MV5BMl5BanBnXkFtZTYwNDc3NTc2._V1_.jpg');
+
+INSERT INTO filme (nomefilme, ano, categoria, descricao, imagem)
+VALUES ('O Clube da Luta', '1999', 'Drama', 'Um homem insone encontra um escape em um clube de luta secreto.', 'https://br.web.img3.acsta.net/medias/nmedia/18/90/95/96/20122166.jpg;
+

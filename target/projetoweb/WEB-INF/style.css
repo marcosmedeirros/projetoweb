@@ -63,3 +63,29 @@
     background-color: #0069d9;
     border-color: #0062cc;
 }
+
+.rating {
+    display: inline-block; /* Para que o container das estrelas não ocupe toda a largura */
+    unicode-bidi: bidi-override; /* Para corrigir a ordem das estrelas em alguns navegadores */
+    direction: rtl; /* Para inverter a ordem das estrelas */
+}
+
+.rating input[type=radio] {
+    display: none; /* Esconde os inputs do tipo radio */
+}
+
+.rating label {
+    font-size: 20px; /* Tamanho das estrelas */
+    color: #ccc; /* Cor inicial das estrelas (cinza) */
+    cursor: pointer; /* Adiciona o cursor de mãozinha */
+}
+
+.rating label:before {
+    content: '\2605'; /* Caractere Unicode para estrela vazia */
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffc107; /* Cor das estrelas preenchidas (amarelo) */
+}
